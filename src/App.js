@@ -24,7 +24,7 @@ import ProfessorsApp  from "./ProfessorsApp.js"
 import ProfessorApproval from "./ProfessorApproval.js"
 import GradeSending from "./GradeSending.js"
 import History from "./History.js"
-import Appl from "./Appl.js"
+//import Appl from "./Appl.js"
 import {Redirect} from 'react-router-dom';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import axios from 'axios';
