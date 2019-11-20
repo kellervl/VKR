@@ -26,7 +26,7 @@ constructor(props) {
         login: this.state.login,
         password:this.state.password
       };
-      axios.post('http://localhost:8000/api/signin',
+      axios.post('http://35.228.34.97:8000/api/signin',
        user,{ withCredentials: true })
         .then(result => {
           //console.log(document.cookie)
