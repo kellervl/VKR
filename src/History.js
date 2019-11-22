@@ -38,7 +38,7 @@ class History extends React.Component{
   }
   
   componentDidMount() {
-  var url='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/history';
+  var url='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/history';
  axios.get(url,{
   withCredentials: true}).then(response => { 
     if(response.status===200){
