@@ -16,7 +16,7 @@ export default class MyProjects extends React.Component
     componentDidMount() {
         const tenp=this.props.someData;
         var temp1=JSON.parse(localStorage.getItem("id"));
-        const urll='http://localhost:8000/api/studentprofile/'+`${temp1}`+'/myprojects';
+        const urll='http://35.228.34.97:8000/api/studentprofile/'+`${temp1}`+'/myprojects';
         axios.get(urll,{
     withCredentials: true}).then(response => { 
       if(response.status===200){
