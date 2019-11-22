@@ -76,7 +76,7 @@ export default class GradeSending extends React.Component {
       
     }
     handleClick(){
-      var ll='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/'+`${this.props.match.params.idd}` +'/'+`${this.props.match.params.iddd}`
+      var ll='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/'+`${this.props.match.params.idd}` +'/'+`${this.props.match.params.iddd}`
       axios.post(ll,this.state.info,{
         withCredentials: true}).then(response => { 
           if(response.status===200){
