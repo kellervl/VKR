@@ -26,8 +26,8 @@ export default class AdminApproval extends React.Component{
       {information:[]}
     }
     componentDidMount() {
-      var url='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/adminapproval'
-      var url2='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/supervisorapproval'
+      var url='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/adminapproval'
+      var url2='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/supervisorapproval'
       if(JSON.parse(localStorage.getItem("type"))=="admin"){
       axios.get(url,{
        withCredentials: true}).then(response => { 
