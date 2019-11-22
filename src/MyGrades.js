@@ -34,7 +34,7 @@ export default class MyGrades extends React.Component {
     componentDidMount() {
         
         var temp1=JSON.parse(localStorage.getItem("id"));
-        const urll='http://localhost:8000/api/studentprofile/'+`${temp1}`+'/mygrades';
+        const urll='http://35.228.34.97:8000/api/studentprofile/'+`${temp1}`+'/mygrades';
         axios.get(urll,{
     withCredentials: true}).then(response => { 
       if(response.status===200){
