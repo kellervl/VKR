@@ -30,7 +30,7 @@ export default  class StudentApplications extends React.Component{
   }
   componentDidMount() {
     
-    var ur='http://localhost:8000/api/professorprofile/'+ `${JSON.parse(localStorage.getItem("id"))}`+'/studentappl'
+    var ur='http://35.228.34.97:8000/api/professorprofile/'+ `${JSON.parse(localStorage.getItem("id"))}`+'/studentappl'
     axios.get(ur,{
      withCredentials: true}).then(response => { 
        if(response.status===200){
