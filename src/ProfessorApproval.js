@@ -19,7 +19,7 @@ export default class ProfessorApproval extends React.Component{
     this.handleClick=this.handleClick.bind(this);
     this.handleClickk=this.handleClickk.bind(this)}
     componentDidMount() {
-    var url='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/professorappoval/'+`${this.props.match.params.idapp}`
+    var url='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/professorappoval/'+`${this.props.match.params.idapp}`
     axios.get(url,{
     withCredentials: true}).then(response => { 
       if(response.status===200){
@@ -33,7 +33,7 @@ export default class ProfessorApproval extends React.Component{
     }
     handleClick() {
       console.log(this.state)
-      var urll='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/professorapproval/'+`${this.props.match.params.idapp}`+'/'+`${this.state.itemss.map(item=>item.Student_idStudent)}`+'/'+`${this.state.itemss.map(item=>item.idRoles_of_project)}`;
+      var urll='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/professorapproval/'+`${this.props.match.params.idapp}`+'/'+`${this.state.itemss.map(item=>item.Student_idStudent)}`+'/'+`${this.state.itemss.map(item=>item.idRoles_of_project)}`;
       var data ='согласовано'
       axios.post(urll,data,{
     withCredentials: true}).then(response => { 
@@ -50,7 +50,7 @@ export default class ProfessorApproval extends React.Component{
     }  
     handleClickk() {
       console.log(this.state)
-      var urll='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/professordisapproval/'+`${this.props.match.params.idapp}`+'/'+`${this.state.itemss.map(item=>item.Student_idStudent)}`+'/'+`${this.state.itemss.map(item=>item.idRoles_of_project)}`;
+      var urll='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/professordisapproval/'+`${this.props.match.params.idapp}`+'/'+`${this.state.itemss.map(item=>item.Student_idStudent)}`+'/'+`${this.state.itemss.map(item=>item.idRoles_of_project)}`;
       var data ='отказано'
       axios.post(urll,data,{
       withCredentials: true}).then(response => { 
