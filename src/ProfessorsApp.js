@@ -16,7 +16,7 @@ export default class ProfessorsApp extends React.Component{
   }
   }
   componentDidMount() {
-    var url='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/professorsapp'
+    var url='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/professorsapp'
  axios.get(url,{
   withCredentials: true}).then(response => { 
     if(response.status===200){
