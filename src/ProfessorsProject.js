@@ -54,10 +54,10 @@ export default class ProfessorsProject extends React.Component {
     }
   
       componentDidMount() {
-        var url='http://localhost:8000/api/projectcatalog/'+`${this.props.match.params.id}`;
-        var url1='http://localhost:8000/api/projectcatalog/'+`${this.props.match.params.id}`+'/roles';
-        var url2='http://localhost:8000/api/projectcatalog/'+`${this.props.match.params.id}`+'/stages';
-        var url3='http://localhost:8000/api/projectcatalog/'+`${this.props.match.params.id}`+'/prep';
+        var url='http://35.228.34.97:8000/api/projectcatalog/'+`${this.props.match.params.id}`;
+        var url1='http://35.228.34.97:8000/api/projectcatalog/'+`${this.props.match.params.id}`+'/roles';
+        var url2='http://35.228.34.97:8000/api/projectcatalog/'+`${this.props.match.params.id}`+'/stages';
+        var url3='http://35.228.34.97:8000/api/projectcatalog/'+`${this.props.match.params.id}`+'/prep';
         axios.get(url,{
          withCredentials: true}).then(response => { 
            if(response.status===200){
