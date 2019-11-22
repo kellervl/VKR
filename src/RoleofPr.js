@@ -39,7 +39,7 @@ export default class RoleofPr extends React.Component {
     }
   
    componentDidMount() {
-     var l='http://localhost:8000/api/profile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/proj/'+`${this.props.match.params.idd}`+'/roleofpr/'+`${this.props.match.params.iddd}`
+     var l='http://35.228.34.97:8000/api/profile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/proj/'+`${this.props.match.params.idd}`+'/roleofpr/'+`${this.props.match.params.iddd}`
      console.log(l)
    axios.get(l,{
     withCredentials: true}).then(response => { 
