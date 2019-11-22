@@ -23,7 +23,7 @@ export default class Logout extends Component {
  }    
     
     componentDidMount(){
-        axios.get('http://localhost:8000/api/logout',{
+        axios.get('http://35.228.34.97:8000/api/logout',{
             withCredentials: true}).then(response => { 
               if(response.status===200){
                 localStorage.removeItem("id");
