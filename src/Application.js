@@ -30,7 +30,7 @@ export default class Application extends React.Component {
       
       event.preventDefault();
       console.log(this.props.someData)
-      var url='http://localhost:8000/api/studentprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/application';
+      var url='http://35.228.34.97:8000/api/studentprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/application';
       const project = {
         student_contact_inf: this.state.student_contact_inf,
         priority:this.state.priority,
