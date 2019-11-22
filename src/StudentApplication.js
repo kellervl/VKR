@@ -32,7 +32,7 @@ export default class StudentApplication extends React.Component {
     componentDidMount() {
         const tenp=this.props.someData;
         var tempor=JSON.parse(localStorage.getItem("id"));
-        const url='http://localhost:8000/api/studentprofile/'+`${tempor}`+'/myapplications/'+`${this.props.match.params.index}`;
+        const url='http://35.228.34.97:8000/api/studentprofile/'+`${tempor}`+'/myapplications/'+`${this.props.match.params.index}`;
         axios.get(url,{
     withCredentials: true}).then(response => { 
       if(response.status===200){
