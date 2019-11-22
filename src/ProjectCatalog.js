@@ -32,7 +32,7 @@ export default class ProjectCatalog extends Component{
   }
   
   componentDidMount() {
- axios.get('http://localhost:8000/api/projectcatalog',{
+ axios.get('http://35.228.34.97:8000/api/projectcatalog',{
   withCredentials: true}).then(response => { 
     if(response.status===200){
       console.log(response)
