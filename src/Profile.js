@@ -36,8 +36,8 @@ export default class Profile extends Component{
   } 
 }
    componentDidMount(){
-    var link='http://localhost:8000/api/studentprofile/'+`${JSON.parse(localStorage.getItem("id"))}`;
-    var link2='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`;
+    var link='http://35.228.34.97:8000/api/studentprofile/'+`${JSON.parse(localStorage.getItem("id"))}`;
+    var link2='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`;
     if(JSON.parse(localStorage.getItem("type"))=="student"){
       axios.get(link,{
         withCredentials: true}).then(response => { 
