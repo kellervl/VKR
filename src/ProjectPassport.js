@@ -111,7 +111,7 @@ export default class ProjectPassport extends Component{
     handleSubmit(event) {
       event.preventDefault();
       console.log(this.props.someData)
-      var url='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}` +'/projectpassport'
+      var url='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}` +'/projectpassport'
       const project = {
         project_name: this.state.project_name,
         type_of_project:this.state.type_of_project,
