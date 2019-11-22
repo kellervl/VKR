@@ -24,8 +24,8 @@ export default class ProjectAdminApproval extends React.Component {
       this.handleClickk=this.handleClickk.bind(this)
     }
     handleClick() {
-      var urll1='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/supervisorapproval/'+`${this.state.items.map(item=> item.idProjects)}`;
-      var urll2='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/adminapproval/'+`${this.state.items.map(item=> item.idProjects)}`;
+      var urll1='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/supervisorapproval/'+`${this.state.items.map(item=> item.idProjects)}`;
+      var urll2='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/adminapproval/'+`${this.state.items.map(item=> item.idProjects)}`;
       var data ='согласован'
       if(JSON.parse(localStorage.getItem("type"))=="supervisor"){
       axios.get(urll1,{
@@ -54,8 +54,8 @@ export default class ProjectAdminApproval extends React.Component {
       
   
     handleClickk() {
-      var urll1='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/supervisordisapproval/'+`${this.state.items.map(item=> item.idProjects)}`;
-      var urll2='http://localhost:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/admindisapproval/'+`${this.state.items.map(item=> item.idProjects)}`;
+      var urll1='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/supervisordisapproval/'+`${this.state.items.map(item=> item.idProjects)}`;
+      var urll2='http://35.228.34.97:8000/api/professorprofile/'+`${JSON.parse(localStorage.getItem("id"))}`+'/admindisapproval/'+`${this.state.items.map(item=> item.idProjects)}`;
       var data ='отказано администратором'
       if(JSON.parse(localStorage.getItem("type"))=="supervisor"){
       axios.get(urll1,{
@@ -90,8 +90,8 @@ export default class ProjectAdminApproval extends React.Component {
   
       componentDidMount() {
         this._isMounted = true;
-        var url='http://localhost:8000/api/projectcatalog/'+`${this.props.match.params.id}`;
-        var url1='http://localhost:8000/api/projectcatalog/'+`${this.props.match.params.id}`+'/roles';
+        var url='http://35.228.34.97:8000/api/projectcatalog/'+`${this.props.match.params.id}`;
+        var url1='http://35.228.34.97:8000/api/projectcatalog/'+`${this.props.match.params.id}`+'/roles';
         axios.get(url,{
          withCredentials: true}).then(response => { 
            if(response.status===200){
